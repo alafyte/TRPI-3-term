@@ -1,9 +1,9 @@
 /*1. Напишите функцию, которая рассчитывает площадь, диаметр и длину окружности круга. Радиус круга вводит пользователь. */
 let radius = Number(prompt("Введите радиус", ''));
 function circleProperties(radius) {
-    alert(`Площадь круга радиусом ${radius} равна ${Math.round(Math.PI * Math.pow(radius, 2))}`);
+    alert(`Площадь круга радиусом ${radius} равна ${(Math.PI * Math.pow(radius, 2)).toFixed(2)}`);
     alert(`Диаметр круга радиусом ${radius} равен ${radius * 2}`);
-    alert(`Длина окружности круга радиусом ${radius} равна ${Math.round(2 * Math.PI * radius)}`);
+    alert(`Длина окружности круга радиусом ${radius} равна ${(2 * Math.PI * radius).toFixed(2)}`);
 }
 circleProperties(radius);
 
