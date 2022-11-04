@@ -15,6 +15,8 @@ let circleAreaArrow = (radius) => {
     alert(`Площадь круга радиусом ${radius} равна ${(Math.PI * Math.pow(radius, 2)).toFixed(2)}`);
 };
 
+circleAreaDec(radius);
+
 //Диаметр
 function circleDiameterDec(radius) {
     alert(`Диаметр круга радиусом ${radius} равен ${radius * 2}`);
@@ -27,6 +29,8 @@ let circleDiameterEx = function(radius) {
 let circleDiameterArrow = (radius) => {
     alert(`Диаметр круга радиусом ${radius} равен ${radius * 2}`);
 };
+
+circleDiameterEx(radius);
 
 //Длина окружности
 function circumferenceDec(radius) {
@@ -41,6 +45,7 @@ let circumferenceArrow = (radius) => {
     alert(`Длина окружности круга радиусом ${radius} равна ${(2 * Math.PI * radius).toFixed(2)}`);
 };
 
+circumferenceArrow(radius);
 
 /*2. Реализуйте функцию с тремя параметрами. Первый параметр по умолчанию. 
 Третий параметр вводит пользователь. Функция возвращает строку из трех параметров. */
@@ -57,7 +62,7 @@ function counterOfStudents() {
     let counter = 0
     while (true) {
         let student = prompt("Введите имя студента (Чтобы прекратить ввод, введите 'стоп'): ", '');
-        if (student.toLowerCase() == "стоп") {
+        if (student.toLowerCase() == "стоп" || student == "") {
             return counter;
         }
         counter++
@@ -105,7 +110,7 @@ function passwordGuessingTime() {
     }
     alert(`${years} лет ${months} месяцев ${days} дней ${hours} часов ${minutes} минут ${seconds} секунд`)
 }
-passwordGuessingTime();
+//passwordGuessingTime();
 
 /*5. Пользователь вводит данные. Если он ввел число, то преобразуйте его в 16-ричную систему счисления (вывод в верхнем регистре). 
 Если число дробное – округлите его до наибольшего, наименьшего и ближайшего целого. Если пользователь ввел текст, то преобразуйте его к 
@@ -134,7 +139,7 @@ while (true) {
 Проверьте его ответ и сообщите в каком символе он допустил ошибку, если она есть. */
 const dictionaryWord = "Абажур";
 
-let studentsAnswer = prompt("Введите словарное слово", '');
+let studentsAnswer = prompt("Введите словарное слово: абаж_р", '');
 let wrongSymbol;
 
 if (studentsAnswer.toLowerCase() != "абажур") {
@@ -167,14 +172,14 @@ let tg2 = firstLeg / secondLeg;
 let ctg1 = firstLeg / secondLeg;
 let ctg2 = secondLeg / firstLeg;
 
-alert(`Площадь треугольника: ${triangleArea}`);
-alert(`Площадь треугольника: ${trianglePerimeter}`);
-alert(`Высота треугольника: ${triangleHeight}`);
-alert(`Косинус первого угла треугольника: ${cos1}`);
-alert(`Косинус второго угла треугольника: ${cos2}`);
-alert(`Синус первого угла треугольника: ${sin1}`);
-alert(`Синус второго угла треугольника: ${sin2}`);
-alert(`Тангенс первого угла треугольника: ${tg1}`);
-alert(`Тангенс второго угла треугольника: ${tg2}`);
-alert(`Котангенс первого угла треугольника: ${ctg1}`);
-alert(`Котангенс второго угла треугольника: ${ctg2}`);
+alert(`Площадь треугольника: ${triangleArea}\n
+Площадь треугольника: ${trianglePerimeter}\n
+Высота треугольника: ${triangleHeight}\n
+Косинус первого угла треугольника: ${cos1}\n
+Косинус второго угла треугольника: ${cos2}\n
+Синус первого угла треугольника: ${sin1}\n
+Синус второго угла треугольника: ${sin2}\n
+Тангенс первого угла треугольника: ${tg1}\n
+Тангенс второго угла треугольника: ${tg2}\n
+Котангенс первого угла треугольника: ${ctg1}\n
+Котангенс второго угла треугольника: ${ctg2}\n`);
