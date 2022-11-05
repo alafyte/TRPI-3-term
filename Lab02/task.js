@@ -143,7 +143,7 @@ let studentsAnswer = prompt("Введите словарное слово: аб�
 let wrongSymbol;
 
 if (studentsAnswer.toLowerCase() != "абажур") {
-    for (i = 0; i < dictionaryWord.length - 1; i++) {
+    for (i = 0; i < dictionaryWord.length; i++) {
         if (dictionaryWord[i].toLowerCase() != studentsAnswer[i].toLowerCase()) {
             wrongSymbol = i;
             break;
