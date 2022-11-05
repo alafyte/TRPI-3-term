@@ -51,10 +51,10 @@ circumferenceArrow(radius);
 Третий параметр вводит пользователь. Функция возвращает строку из трех параметров. */
 let thirdParameter = prompt("Введите третий параметр", '');
 
-function threeParameters(secondParameter, thirdParameter, firstParameter = "JavaScript") {
+function threeParameters(firstParameter = "JavaScript", secondParameter, thirdParameter) {
     alert(firstParameter + secondParameter + thirdParameter);
 }
-threeParameters(" is a ", thirdParameter);
+threeParameters(undefined, " is a ", thirdParameter);
 
 /*3. Реализуйте функцию, которая рассчитывает количество присутствующих студентов. 
 Имена присутствующих студентов пользователь вводит в модальное окно. */
