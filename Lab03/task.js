@@ -48,6 +48,7 @@ alert(`Количество нечетных дней: ${countOfOddDays}`);
     let button1 = document.createElement("button");
     let button2 = document.createElement("button");
     let accent = document.createElement("em");
+    let container = document.querySelector("body");
     
     let ForButton = {
         color: "aqua",
@@ -76,8 +77,6 @@ alert(`Количество нечетных дней: ${countOfOddDays}`);
     link.innerHTML = "Cсылка";
     accent.innerHTML = "Акцент";
     button2.innerHTML = "Кнопка 2";
-
-    let container = document.querySelector("body");
 
     container.append(button1);
     container.append(button2);
