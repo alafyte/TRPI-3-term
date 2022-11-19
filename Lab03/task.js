@@ -3,14 +3,13 @@
 let comment = prompt("Введите новый комментарий", '');
 const n = 140;
 let result;
-let pos = 0;
 
 if (comment.length > n) {
     alert("Длина комментария не должна превышать 140 символов!")
 } else {
     result = comment.replace(/кот/gi, '*');
     result = result.replace(/собак/gi, 'Собак');
-    result = result.replace(/пес/gi, 'Многоуважаемый пес');
+    result = result.replace(/пес/gi, 'многоуважаемый пес');
 }
 alert(result);
 
@@ -27,7 +26,7 @@ let week = {
 }
 
 let number = Number(prompt("Введите номер дня недели", ''));
-if (number < 1 || number > 8) {
+if (number < 1 || number > 7) {
     alert("Неккоретные данные");
 }
 else {
@@ -49,8 +48,7 @@ alert(`Количество нечетных дней: ${countOfOddDays}`);
     let button1 = document.createElement("button");
     let button2 = document.createElement("button");
     let accent = document.createElement("em");
-    let container = document.querySelector("body");
-
+    
     let ForButton = {
         color: "aqua",
         background: "black",
@@ -65,7 +63,7 @@ alert(`Количество нечетных дней: ${countOfOddDays}`);
         'margin-right': "20px",
     }
 
-    let ForElements = {
+    let ForAccent = {
         color: "red",
         'margin-right': "20px",
     }
@@ -73,11 +71,13 @@ alert(`Количество нечетных дней: ${countOfOddDays}`);
     Object.assign(link.style, ForLink);
     Object.assign(button1.style, ForButton);
     Object.assign(button2.style, ForButton);
-    Object.assign(accent.style, ForElements);
+    Object.assign(accent.style, ForAccent);
 
     link.innerHTML = "Cсылка";
     accent.innerHTML = "Акцент";
     button2.innerHTML = "Кнопка 2";
+
+    let container = document.querySelector("body");
 
     container.append(button1);
     container.append(button2);
@@ -134,9 +134,9 @@ alert(`Количество позиций в корзине: ${set.size}`);
  */
 let basket = new Map();
 exit = true;
+let summ = 0;
 while (exit) {
     let choice = +prompt("1 - Добавить товар\n2 - Удалить товар\n3 - Изменить кол-во товара\n4 - Информация о товарах в корзине\n5 - Выход");
-    let summ = 0;
     let tmp = {
         id: id = 0,
         Count: ct = 0,
